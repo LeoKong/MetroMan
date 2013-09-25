@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <TextView 
+        style="@style/title_text"
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="起点:"
+        android:layout_alignParentLeft="true"
+        />
+    
+         
+        <EditText 
+            android:id="@+id/editsearch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入起点站"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/t1"
+            android:background="@drawable/edit_text"/>
+        
+        <TextView 
+        style="@style/title_text"
+        android:id="@+id/t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="终点:"
+        android:layout_toRightOf="@+id/editsearch1"
+        />
+        
+        <EditText 
+            android:id="@+id/editsearch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="请输入终点站"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/t2"
+            android:background="@drawable/edit_text"/>
+        
+        <Button 
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editsearch2"
+            android:background="@drawable/search_btn"/>
+        
+
+        
+    
+
+</RelativeLayout>

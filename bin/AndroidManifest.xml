@@ -1,0 +1,90 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.klcmetro"
+    android:versionCode="1"
+    android:versionName="2.0" >
+
+    <uses-sdk android:minSdkVersion="8" 
+       />
+
+    <!-- 使用百度地图所需要的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 保持屏幕常亮权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"></uses-permission>
+
+    <application
+        android:icon="@drawable/signal"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RecommandActivity"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity
+            android:name=".MetroMapActivity"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity android:name=".ShowMapActivity" 
+            />
+        <activity
+            android:name=".SearchInMapActivity"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity
+            android:name=".SettingActivity"
+            android:configChanges="orientation|keyboardHidden" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".FeedBackActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".TermsActivity" />
+
+        <!-- 友盟 -->
+        <activity
+            android:name="com.umeng.fb.ui.SendFeedback"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.umeng.fb.ui.FeedbackConversations" />
+        
+        
+        <activity
+            android:name="com.umeng.fb.ui.FeedbackConversation"
+            android:configChanges="keyboard" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5174e3f256240bc0a9008d8c" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng" />
+
+        <!-- 多盟 -->
+        <activity
+            android:name="cn.domob.android.ads.DomobActivity"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+    </application>
+
+</manifest>

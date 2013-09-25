@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.baidu.mapapi.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+    
+    <RelativeLayout
+        android:id="@+id/first_relativelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title"
+        >
+
+        <TextView
+            style="@style/title_text"
+            android:id="@+id/show_searching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="正在获取您的位置信息..." />
+        
+        <ImageButton
+                android:id="@+id/search_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/search_btn" />
+        
+    </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/second_relativelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/title"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/t1"
+                style="@style/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:text="起点:" />
+
+            <EditText
+                android:id="@+id/editsearch1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/t1"
+                android:background="@drawable/edit_text"
+                android:ems="5"
+                android:textColor="@color/black"
+                android:layout_centerVertical="true"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/t2"
+                style="@style/title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/editsearch1"
+                android:layout_centerVertical="true"
+                android:text="终点:" />
+
+            <EditText
+                android:id="@+id/editsearch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/t2"
+                android:background="@drawable/edit_text"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:ems="5"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/search_btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/search_btn" />
+        </RelativeLayout>
+
+    
+
+</RelativeLayout>
